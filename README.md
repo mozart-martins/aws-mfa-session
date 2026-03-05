@@ -106,13 +106,14 @@ The script will:
 
 ## Repository Structure
 
+```
 aws-mfa-session
-
 ├── README.md
-└── scripts  
-  └── auth-mfa.sh
-└── iam  
-  └── require-mfa-policy.json
+├── scripts
+│   └── auth-mfa.sh
+└── iam
+    └── require-mfa-policy.json
+```
 
 ---
 
