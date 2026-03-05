@@ -90,7 +90,7 @@ MFA_ARN="arn:aws:iam::123456789012:mfa/cli-user"
 
 ### 3. Run the script
 
-./aws-mfa-session.sh
+./auth-mfa.sh
 
 Enter the MFA code when prompted.
 
@@ -106,7 +106,7 @@ The script will:
 
 aws-mfa-session
 
-├── aws-mfa-session.sh  
+├── auth-mfa.sh
 ├── README.md  
 └── iam  
   └── require-mfa-policy.json
