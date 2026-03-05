@@ -24,6 +24,19 @@ Install jq (Ubuntu/Debian):
 
 sudo apt install jq
 
+## Configure AWS CLI
+
+Before using the script, configure your AWS credentials:
+
+aws configure --profile user-name
+
+You will be prompted to enter:
+
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region
+- Output format
+
 ## Usage
 
 1. Edit the script and set your MFA ARN:
