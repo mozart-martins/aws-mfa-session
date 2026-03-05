@@ -9,7 +9,9 @@ Simple bash script that retrieves temporary credentials from AWS STS using MFA a
 Install the AWS CLI on Linux:
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
 unzip awscliv2.zip
+
 sudo ./aws/install
 
 Verify installation:
