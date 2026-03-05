@@ -1,0 +1,8 @@
+# AWS credentials
+.aws/
+
+# Linux
+*.log
+
+# temporary files
+*.tmp

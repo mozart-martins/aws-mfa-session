@@ -82,9 +82,11 @@ You will be prompted to enter:
 
 ### 2. Configure the MFA ARN
 
-Edit the script and set your MFA device ARN:
+Edit the script and set the following values:
 
-MFA_ARN="arn:aws:iam::123456789012:mfa/cli-user"
+- **MFA_ARN** – ARN of your MFA device  
+- **SOURCE_PROFILE** – AWS CLI profile with your long-term credentials (configured with `aws configure`)  
+- **TARGET_PROFILE** – profile where the temporary MFA session credentials will be stored
 
 ---
 
@@ -106,7 +108,18 @@ The script will:
 
 aws-mfa-session
 
-├── auth-mfa.sh
-├── README.md  
+├── README.md
+└── scripts  
+  └── auth-mfa.sh
 └── iam  
   └── require-mfa-policy.json
+
+---
+
+## Security Notes
+
+Never commit AWS credentials to a repository.
+
+This project only stores example configuration values.
+AWS Access Keys and Secret Keys must remain in the local
+`~/.aws/credentials` file and should never be committed to Git. 
