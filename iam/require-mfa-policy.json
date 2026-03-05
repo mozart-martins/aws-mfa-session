@@ -1,0 +1,33 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowAllUsersSeeGetSessionToken",
+      "Effect": "Allow",
+      "Action": [
+        "sts:GetSessionToken"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "DenyAllExceptIfMFAPresent",
+      "Effect": "Deny",
+      "NotAction": [
+        "sts:GetSessionToken",
+        "iam:ChangePassword",
+        "iam:CreateVirtualMFADevice",
+        "iam:EnableMFADevice",
+        "iam:ListMFADevices",
+        "iam:ResyncMFADevice"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "BoolIfExists": {
+          "aws:MultiFactorAuthPresent": "false"
+        }
+      }
+    }
+  ]
+}
